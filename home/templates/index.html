@@ -1,0 +1,307 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!-- bootsrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/8c8f8b8b8a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- w3schools -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- iconscout -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://unicons.iconscout.com/release/v4.0.0/script/monochrome/bundle.js"/>
+
+    <!-- picsum -->
+    <script src="https://picsum.photos/200/300"></script>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Amita&effect=3d' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Chathura' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="{% static 'main10.css' %}">
+    <script src="{% static 'main7.js' %}"></script>
+    <title>Welcome clean</title>
+</head>
+<header>
+    <span>Community</span>
+    
+    <a id="donate">
+        <!-- class fa coin -->
+        <span><i class="uil uil-coins"></i></span>
+        <span>Donate</span>
+        <span><i class="uil uil-arrow-right"></i></span>
+    </a>
+    <script>
+        var donate = document.getElementById("donate");
+        donate.addEventListener("click", () => {
+            var detail_top = document.getElementById("details").offsetTop;
+            window.scrollTo({
+                top: detail_top,
+                behavior: "smooth"
+            });
+        })
+    </script>
+
+    <div id="right_links">
+
+        <a id="contact_btn">Contact</>
+
+        <a id="about_btn">About</a>
+
+    </div>
+    <script>
+        var contact = document.getElementById("contact_btn");
+        contact.addEventListener("click", () => {
+            var top = document.getElementById("contact").offsetTop;
+            window.scrollTo({
+                top: top,
+                left: 0,
+                behavior: "smooth"
+            })
+        })
+
+        var about_me = document.getElementById("about_btn");
+        about_me.addEventListener("click", () => {
+            var top1 = document.getElementById("slide_container").offsetTop - 50;
+            window.scrollTo({
+                top: top1,
+                left: 0,
+                behavior: "smooth"
+            })
+        })
+    </script>
+    <div id="de_container">
+        <div id="de_indicator"></div>
+    </div>
+</header>
+<script>
+    var header = document.querySelector("header");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 0) {
+            header.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.4)";
+        } else {
+            header.style.boxShadow = "none";
+        }
+    })
+</script>
+<main>
+    <body onload="write()">
+        <div id="background">
+            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'><rect fill='#ffffff' width='1600' height='1600'/><defs><linearGradient id='a' x1='0' x2='0' y1='1' y2='0'><stop  offset='0' stop-color='#0FF'/><stop  offset='1' stop-color='#CF6'/></linearGradient><linearGradient id='b' x1='0' x2='0' y1='0' y2='1'><stop  offset='0' stop-color='#F00'/><stop  offset='1' stop-color='#FC0'/></linearGradient></defs><g fill='#FFF' fill-opacity='0' stroke-miterlimit='10'><g  stroke='url(#a)' stroke-width='2'><path  transform='translate(0 0)' d='M1409 581 1450.35 511 1490 581z'/><circle  stroke-width='4' transform='rotate(0 800 450)' cx='500' cy='100' r='40'/><path  transform='translate(0 0)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/></g><g stroke='url(#b)' stroke-width='4'><path  transform='translate(0 0)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/><rect  stroke-width='8' transform='rotate(0 1089 759)' x='1039' y='709' width='100' height='100'/><path  transform='rotate(0 1400 132)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/></g></g></svg>
+        </div>
+        <div id="background_opacity">
+
+        </div>
+        <div class="container">
+            <br>
+            <div id="head" class="container_borders">
+                <h3>Community</h3>
+                <p id="community_description"></p>
+                <div style="position: relative;" id="date_container">
+                    <div id="calender_icon">
+                        <i class="uil uil-calendar-alt"></i>
+                    </div>
+                    <div id="c_out">
+
+                    </div>
+                </div>
+                <br><br>
+            </div>
+
+            <br><br>
+
+            <div class="container_borders">
+            <h3 class="titled" id="">Here are my two active fundraisers. &nbsp;&nbsp; <i class="uil uil-arrow-circle-down"></i></h3>
+
+            <div id="fundraise_container">
+
+                <div id="go_get_funding" style="width: 100%;">
+                    <h3>GoGetFunding</h3>
+                    <a href="https://gogetfunding.com/back-jacob/">
+                        <div style="width:280px; margin: 0 auto;"><iframe src='https://gogetfunding.com/embed-widget2?campaignid=7666657&frame_type=t1' style='width:100%;height:460px; border: none;' scrolling='no'></iframe></div>
+                    </a>
+                </div>
+
+                <div id="m_change" style="width: 100%;">
+                    <h3>
+                        M-changa
+                    </h3>
+                    <a href="https://mchanga.africa/fundraiser/58470">
+                    <div style="width:280px; background-color: aliceblue; margin: 0 auto; border-radius: 10px; height: 420px;">
+                        <img src="https://res.cloudinary.com/changa/image/upload/f_auto,q_auto,w_auto/c_pad,h_360,q_auto,w_550/v1492603822/commonshare/mchangawide.png" alt="M-changa logo" style="width: 100%; height: auto; margin-top: 100px;">
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            </div>
+            <br> <br>
+            <div class="container_borders">
+                <h4 class="titled">
+                    Short video about me
+                    <span>
+                        <i class="uil uil-video"></i>
+                    </span>
+                </h4>
+                <div id="my_iframe">
+                    <iframe frameborder="0" width="100%" height="100%" src="https://biteable.com/watch/embed/3743389/dcdf406ec98bd78cea9335d49728a6c7" allowfullscreen="true" allow="autoplay"></iframe>
+                </div>
+            </div>
+            <br><br>
+            <div id="slide_container" class="container_borders">
+                <h4 class="titled">
+                    About me.
+                    <span>
+                        <i class="uil uil-users-alt"></i>
+                    </span>
+                </h4>
+                <br>
+                <div class="slide">
+                    <p>Hey!🖐 My name is Jacob. I am a self-taught developer and I am currently learning Python. Pursuing in the field of software development, 
+                        and working on projects that are useful to the community has been my ambition since I was in 
+                        high school. Unfortunately after graduating from high school, I was enrolled in the school 
+                        of education.
+                    </p>
+                </div>
+                <div class="slide">
+                    <p>
+                        That didn't stop me from pursuing my dream of becoming a software developer. I went down the rabbit hole and started learning HTML & CSS3. I used the free online tutorial site w3schools.com to learn the basics of HTML & CSS3. I then moved onto learning Python and later on Django.
+                    </p>
+                </div>
+                <div class="slide">
+                    <p>Doing this, I have developed a strong foundation in programming and have gained a good understanding of the fundamentals of programming. And it has helped me to develop a strong passion for programming. So, to break from the bulk of the tutorials, I decided to apply for a bachelor's degree in software Engineering.</p>
+                </div>
+                <div class="slide">
+                    <p>On July 2022 I applied to African Leadership University (ALU) and I got accepted. I also applied for a scholarship and luckily I manged to get a $2ooo worth scholarship waived against $3000 which is their tuition fees.</p>
+                </div>
+                <div class="slide">
+                    <p>My initial approved intake was September 2022. Following that I had applied just two months before, it was too soon for me considering my financial preparation and so I had to make a deferral until January 2023 believing that by then I would have enlightened some weigh down.</p>
+                </div>
+                <div class="slide">
+                    <p>I developed this application specifically for the same reason, to get a financial boost and to connect. Get the hand that I need in managing the expenses and any advice that might help. Do not hesitate to share your thought; if there is any about this approach or any other concern that you think would be good for me. Visit my community page and leave your thought.</p>
+                </div>
+            </div>
+
+            <div id="contact" class="container_borders">
+                <h3>Contact <span><i class="uil uil-file-contract"></i></span></h3>
+
+                <a href="mailto: admin@blissprism.tech">admin@blissprism.tech</a>
+                <a href="tel:+254748199786">(748) 199 786</a>
+            </div>
+            <br><br>
+
+            <div id="details" class="container_borders">
+                <!-- Donate -->
+                <h1 class="titled">
+                    <a>
+                        <!-- class fa coin -->
+                        <i class="uil uil-heart-alt" style="color: rgb(10, 63, 109);"></i>
+                        <span>Donate</span>
+                    </a>
+                </h1>
+
+                <!-- M-Pesa details -->
+                <details id="mpesa">
+                    <summary>
+                        &nbsp;&nbsp;
+                        <i class="uil uil-money-bill" style="color: #333; font-size: 18px;"></i>
+                        &nbsp;&nbsp;
+                        <span>M-Pesa</span>
+                        <span class="dots">...</span>
+                    </summary>
+                    <p>Paybill: <b>891300</b></p>
+                    <p>Account: <b>58470</b></p>
+                </details>
+
+                <!-- Bank details -->
+                <details>
+                    <summary>
+                        &nbsp;&nbsp;
+                        <i class="uil uil-money-bill-stack" style="color: #333; font-size: 18px;" ></i>
+                        &nbsp;&nbsp;
+                        <span>Bank</span>
+                        <span class="dots">...</span>
+                    </summary>
+                    <p>Bank: <b>Absa</b></p>
+                    <p>Account Name: <b>Jacob O. Achira</b></p>
+                    <p>Account Number: <b>2043346469</b></p>
+                </details>
+
+                <details>
+                    <summary>
+                        <!-- PayPal icon -->
+                        &nbsp;&nbsp;
+                        <i class="uil uil-paypal"></i>
+                        &nbsp;&nbsp;
+
+                        <span>PayPal</span> 
+                        <span class="dots">...</span>
+                    </summary>
+                    <p>Paypal: &nbsp;&nbsp;<b>achitrajacobs@gmail.com</b></p>
+                </details>
+
+                <details>
+                    <summary>
+                        &nbsp;&nbsp;
+                        <i class="uil uil-cloud-bookmark"></i>
+                        &nbsp;&nbsp;
+                        <span>GoGetFunding</span>
+                        <span class="dots">...</span>
+                        </summary>
+                    <p>GoGetFunding: <a href="https://gogetfunding.com/back-jacob/" style="text-decoration: none;" target="_blank" > &nbsp;&nbsp;<b>https://gogetfunding.com/back-jacob/</b></a></p>
+                </details>
+
+                <details>
+                    <summary>
+                        &nbsp;&nbsp;
+                        <i class="uil uil-adjust-circle"></i>
+                        &nbsp;&nbsp;
+                        <span>
+                            M-changa
+                        </span>
+                        <span class="dots">...</span>
+                    </summary>
+                    <p>M-changa: <a href="https://mchanga.africa/fundraiser/58470" style="text-decoration: none;" target="_blank"> &nbsp;&nbsp;<b>https://mchanga.africa/fundraiser/58470</b></a></p>
+                </details>
+            </div>
+
+            <br><br>
+
+        </div>
+    </body>
+</main>
+<footer>
+    <div id="footer_body">
+        <a href="https://wa.me/254748199786" target="_blank">
+            <i class="uil uil-whatsapp" style="color: aliceblue; font-size: 18px;"></i>
+        </a>
+        <!-- facebook -->
+        <a href="https://facebook.com/jacobsachitra" target="_blank">
+            <i class="uil uil-facebook-f" style="color: aliceblue; font-size: 18px;"></i>
+        </a>
+        <!-- github -->
+        <a href="https://github.com/AchiraALX" target="_blank">
+            <i class="uil uil-github-alt" style="color: aliceblue; font-size: 18px;"></i>
+        </a>
+    </div>
+    <!-- footer -->
+    <div id="copyright"></div>
+    <script>
+        var date = new Date()
+        var year = date.getFullYear()
+
+        document.getElementById("copyright").innerHTML = "<br>" + "&copy; " + year + " Jacob"
+    </script>
+</footer>
+<div id="baseline"></div>
+</html>

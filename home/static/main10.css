@@ -1,0 +1,386 @@
+* {
+    box-sizing: border-box;
+    transition-duration: .3s;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    padding: 10px;
+    background-color: #333;
+    color: honeydew;
+    text-align: center;
+    font-family: monospace;
+    display: flex;
+    flex-direction: row-reverse;
+}
+footer > div {
+    width: 100%;
+}
+footer > div:first-child {
+    padding: 15px;
+    text-align: right;
+    text-indent: 20px;
+}
+
+footer > div:first-child > a {
+    text-decoration: none;
+    padding: 5px 20px 5px 0px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+footer > div:first-child > a:hover {
+    background-color: rgba(85, 85, 85, 0.557);
+}
+
+footer > div:last-child {
+    font-weight: 800;
+}
+
+#copyright {
+    font-weight: 400;
+    text-align: justify;
+    text-indent: 40px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: aliceblue;
+    padding: 10px;
+    z-index: 1;
+}
+
+#right_links {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-52%);
+}
+
+#right_links > a {
+    text-decoration: none;
+    padding: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#right_links > a:hover {
+    background-color: antiquewhite;
+    font-weight: 800;
+    color: #333;
+}
+
+header > span {
+    font-weight: 1000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 110%;
+}
+
+#background {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    top: -50px;
+    left: 0;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #333;
+}
+
+.container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#background_opacity {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-color: rgba(51, 51, 51, 0.464);
+}
+
+#donate {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: beige;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#donate:hover {
+    background-color: #333;
+    color: honeydew;
+}
+
+#c_out {
+    color: rgb(40, 23, 23);
+    text-align: center;
+    font-weight: 800;
+    font-size: 200%;
+    margin-bottom: 20px;
+    margin: 30px auto;
+}
+
+#slide_container > button {
+    border:  none;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+
+}
+
+#slide_container > button:hover {
+    background-color: antiquewhite;
+    color: #154;
+}
+
+.container_borders {
+    position: relative;
+    border: 2px solid aliceblue;
+    border-radius: 8px;
+    padding-top: 0;
+}
+
+#slide_container {
+    padding-bottom: 20px;
+}
+
+#slide_container > h4 {
+    margin-top: 0;
+}
+
+.slide {
+    letter-spacing:  3px;
+    margin-top: 0;
+    display: none;
+    height: 100%;
+    background-color: rebeccapurple;
+    margin-bottom: 20px;
+    background-image: url(dar.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+
+.slide > p {
+    width: 100%;
+    color: honeydew;
+    font-size: large;
+    font-weight: 600;
+    line-height: 60px;
+    background-color: rgba(51, 51, 51, 0.605);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+#community_description{
+    font-weight: 100;
+    padding: 10px;
+}
+
+.container > h1 {
+    font-weight: 1000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 20px auto;
+}
+
+#contact {
+        background: rgba(17, 85, 68, 0.29);
+        margin-top: 200px;
+        border-radius: 5px;
+        padding: 15px;
+        position: relative;
+        width: 100%;
+        text-align: justify;
+}
+
+#contact > a {
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 10px;
+    background-color: #154;
+    color: aliceblue;
+    border-radius: 5px;
+}
+
+#contact > a:hover {
+    background-color: aliceblue;
+    color: #154;
+}
+
+#contact > a:last-child {
+   position: absolute;
+   right: 0;
+   transform: translateY(-50%);
+}
+
+#contact > h3 {
+    text-align: center;
+    padding: 30px 0px;
+    margin-bottom: 10px;
+    font-weight: 1000;
+    color: aliceblue;
+}
+
+#my_iframe {
+    width: 600px;
+    margin: 20px auto;
+    height: 340px;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+iframe {
+    overflow: hidden;
+}
+
+#fundraise_container {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+#details > details {
+    width: 100%;
+    text-align: justify;
+    padding: 15px;
+    background-color: antiquewhite;
+    color: #154;
+    position: relative;
+}
+
+#details > details > p {
+    text-indent: 50px;
+    padding: 5px;
+    position: relative;
+}
+
+#details > details > p::before {
+    content: "•";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: x-large;
+}
+
+.dots {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #154;
+}
+
+#details > details > summary {
+    font-weight: 1000;
+    font-size: large;
+    color: #154;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+#go_get_funding:hover, #m_change:hover {
+    transform: translateY(-1%);
+}
+
+#calender_icon {
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #154;
+    font-size: 200%;
+    display: none;
+}
+
+.titled {
+    background-color: aliceblue;
+    padding: 10px;
+    color: gray;
+    border-radius: 4px 4px 0px 0px;
+    font-family: cursive;
+    margin-top: 0;
+}
+
+#head {
+    background-color: aliceblue;
+    background-image: linear-gradient(-45deg, aliceblue, antiquewhite, honeydew, beige, aliceblue);
+}
+
+#head > h3 {
+    font-family: cursive;
+    padding: 15px;
+}
+
+#de_container {
+    width: 100%;
+    height: 10px;
+    padding: 1px;
+    background-color: #333;
+    transform: translateY(100%);
+    position: absolute;
+    left: 0;
+}
+
+#de_indicator {
+    height: 100%;
+    background-color: yellow;
+    border-radius: 0px 4px 4px 0px;
+}
+
+/* media queries */
+@media screen and (max-width: 800px) {
+    #background {
+        top: 50px;
+    }
+    #background > svg {
+        height: 100vh;
+    }
+    #donate {
+        display: none;
+    }
+    #my_iframe {
+        width: 400px;
+        height: 290px;
+    }
+    
+    #fundraise_container {
+        flex-direction: column;
+    }
+    #calender_icon {
+        left: 50px;
+    }
+
+    #c_out, #calender_icon {
+        font-size: 150%;
+    }
+}
